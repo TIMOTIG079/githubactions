@@ -7,7 +7,7 @@ jobs:
       - name: get code
         uses: actions/checkout@v3
       - name: nodejs
-        uses: actions/setup-nodde@v3
+        uses: actions/setup-node@v3
       - name: get dependencies
         run: npm ci
       - name: lint
