@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: prin issues
-        run: echo "${{ toJSON(issues) }}" 
+        run: echo "${{ toJSON(github+issues) }}" 
