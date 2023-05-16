@@ -1,0 +1,8 @@
+name: 2nd workflow
+on: [push, issues]
+jobs:
+  issuesjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: prin issues
+        run: echo "${{toJSON(issues)}}" 
