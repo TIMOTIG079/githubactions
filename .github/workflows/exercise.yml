@@ -3,6 +3,7 @@ on: [push, workflow_dispatch]
 jobs: 
   deploy:
     runs-on: ubuntu-22.04
+    steps:
       - name: get code
         uses: actions/checkout@v3
       - name: nodejs
@@ -20,5 +21,6 @@ on: issues
 jobs:
   issuesjob:
     runs-on: ubuntu-latest
-      - name: print issues
+    steps:
+      - name: prin issues
         run: echo "${{toJSON(issues)}}"  
