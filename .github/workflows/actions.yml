@@ -4,8 +4,8 @@ jobs:
  first-job:
   runs-on: ubuntu-22.04
   steps:
-   - name: print hi
-     run: echo hi
+   - name: print github context
+     run: echo "${{ toJSON(github) }}"
    - name: print bye
      run: echo bye
    
