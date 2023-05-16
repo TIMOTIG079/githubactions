@@ -15,12 +15,4 @@ jobs:
       - name: test
         run: npm test
       - name: build
-        run: npm build
-name: 2nd workflow
-on: issues
-jobs:
-  issuesjob:
-    runs-on: ubuntu-latest
-    steps:
-      - name: prin issues
-        run: echo "${{toJSON(issues)}}"  
+        run: npm build 
