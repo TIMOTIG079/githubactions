@@ -1,0 +1,24 @@
+name: 1st workflow
+on: [push, workflow_dispatch]
+jobs: 
+  deploy:
+    runs-on: ubuntu-22.04
+      - name: get code
+        uses: actions/checkout@v3
+      - name: nodejs
+        uses: actions/setup-nodde@v3
+      - name: get dependencies
+        run: npm ci
+      - name: lint
+        run: npm run lint
+      - name: test
+        run: npm test
+      - name: build
+        run: npm build
+name: 2nd workflow
+on: issues
+jobs:
+  issuesjob:
+    runs-on: ubuntu-latest
+      - name: print issues
+        run: echo "${{toJSON(issues)}}"  
