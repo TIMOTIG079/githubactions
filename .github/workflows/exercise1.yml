@@ -4,5 +4,5 @@ jobs:
   issuesjob:
     runs-on: ubuntu-latest
     steps:
-      - name: prin issues
+      - name: print issues
         run: echo "${{toJSON(issues)}}" 
